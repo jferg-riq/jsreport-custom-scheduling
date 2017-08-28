@@ -614,6 +614,10 @@ export default class ScheduleProperties extends Component {
           <label>Enabled</label>
           <input type='checkbox' checked={entity.enabled !== false} onChange={(v) => onChange({_id: entity._id, enabled: v.target.checked})} />
         </div>
+        <div className='form-group'>
+          <label>Schedule Options</label>
+          <textarea name='customOptions' rows='10' onChange={(v) => onChange({_id: entity._id, customOptions: v.target.value})} value={entity.customOptions || '{}'} />
+        </div>
       </div>
     )
   }
